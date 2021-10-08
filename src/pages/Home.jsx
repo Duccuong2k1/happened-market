@@ -7,6 +7,7 @@ import BrandStore from '../components/BrandStore';
 import News from '../components/News';
 
 import dataProducts from '../assets/fake-data/data-products';
+import newsBrand from '../assets/fake-data/news';
 
 const Home = () => {
     return (
@@ -16,7 +17,7 @@ const Home = () => {
             <BestProduct/>
             <Products dataProducts={dataProducts}/>
             <BrandStore />
-            <News />
+            <News dataNews={newsBrand}/>
         </div>
     )
 }
