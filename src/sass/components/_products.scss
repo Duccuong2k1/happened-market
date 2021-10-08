@@ -1,0 +1,45 @@
+.products {
+    padding-bottom: 135px;
+    .container {
+        width: 100%;
+    }
+    &__list {
+        padding: 100px 75px 100px 75px;
+        &__item {
+            max-width: 300px;
+            min-height: auto;
+            margin-top: 60px;
+            cursor: pointer;
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+            &__name {
+                padding: 25px 0;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+            &__footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .price {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+                .rate {
+                    display: flex;
+                    align-items: center;
+                    .icon-heart {
+                        color: #fa7b26;
+                        margin-right: 7px;
+                    }
+                }
+            }
+        }
+    }
+    .seeMore {
+        @include flex(center, center);
+    }
+}

@@ -1,0 +1,58 @@
+.header {
+    background-color: $main-header-bg;
+    width: 100%;
+    height: $header-height;
+    @include tablet {
+        @include flex(center, center);
+        flex-direction: column;
+    }
+    .container {
+        height: 100%;
+        @include flex(center, space-between);
+        flex-wrap: wrap;
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+    &__logo {
+        height: 100%;
+        height: auto;
+        img {
+            height: 100%;
+            color: $txt-white;
+            font-weight: 700;
+            @include tablet {
+                width: 100%;
+                display: none;
+            }
+        }
+    }
+    &__menu {
+        @include flex(center, flex-end);
+        flex-wrap: wrap;
+        &__item {
+            color: $txt-white;
+            margin-left: 25px;
+            padding: 30px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            @include tablet {
+                color: $txt-main-color;
+                padding: 20px;
+            }
+        }
+        &__item:nth-child(3)::after {
+            content: "";
+            position: relative;
+            right: -50px;
+            border-right: 1px solid $txt-white;
+        }
+        @include tablet {
+            flex-direction: column;
+            // background: $txt-white;
+            width: 100%;
+            z-index: 100;
+        }
+        @include mobile {}
+    }
+}
