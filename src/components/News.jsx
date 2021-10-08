@@ -58,6 +58,9 @@ const News = (props) => {
 
                 </Grid>
             </div>
+            <div className="box__hot">
+                <span>hot</span>
+            </div>
             <div className="box__imgNewCoin">
                 <img src={imgNewCoin} alt="" />
             </div>
