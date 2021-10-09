@@ -84,12 +84,12 @@ $val in $colors {
 .main {
     margin-bottom: 2rem;
     min-height: 100vh;
-    @include tablet {
-        margin-top: calc(#{$header-tablet-height}+20px);
-    }
-    @include mobile {
-        margin-top: calc(#{$header-mobile-height}+10px);
-    }
+    // @include tablet {
+    //     margin-top: calc(#{$header-tablet-height}+20px);
+    // }
+    // @include mobile {
+    //     margin-top: calc(#{$header-mobile-height}+10px);
+    // }
 }
 
 .grid {
