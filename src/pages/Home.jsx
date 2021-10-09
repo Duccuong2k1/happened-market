@@ -5,6 +5,7 @@ import BoxIntroduc from '../components/BoxIntroduc';
 import Products from '../components/Products';
 import BrandStore from '../components/BrandStore';
 import News from '../components/News';
+import Video from '../components/Video';
 
 import dataProducts from '../assets/fake-data/data-products';
 import newsBrand from '../assets/fake-data/news';
@@ -18,6 +19,7 @@ const Home = () => {
             <Products dataProducts={dataProducts}/>
             <BrandStore />
             <News dataNews={newsBrand}/>
+            <Video />
         </div>
     )
 }

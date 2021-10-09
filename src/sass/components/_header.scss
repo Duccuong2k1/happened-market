@@ -2,34 +2,70 @@
     background-color: $main-header-bg;
     width: 100%;
     height: $header-height;
+    position: relative;
+    display: block;
+    z-index: 999;
     @include tablet {
         @include flex(center, center);
         flex-direction: column;
     }
     .container {
-        height: 100%;
         @include flex(center, space-between);
         flex-wrap: wrap;
+        position: relative;
         @include tablet {
             flex-direction: column;
         }
+        @include mobile {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .icon-menu {
+            color: $txt-white;
+            font-size: 30px;
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 10px;
+            cursor: pointer;
+            @include tablet {
+                display: block;
+            }
+            @include mobile {
+                display: block;
+            }
+        }
     }
     &__logo {
-        height: 100%;
-        height: auto;
+        height: 26px;
         img {
             height: 100%;
             color: $txt-white;
-            font-weight: 700;
             @include tablet {
                 width: 100%;
-                display: none;
+                // display: none;
             }
         }
     }
     &__menu {
         @include flex(center, flex-end);
         flex-wrap: wrap;
+        @include tablet {
+            flex-direction: column;
+            background-color: $txt-white;
+            width: 100%;
+            position: absolute;
+            top: 50px;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+        @include mobile {
+            width: 100%;
+            flex-direction: column;
+            background-color: $txt-white;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
         &__item {
             color: $txt-white;
             margin-left: 25px;
@@ -37,7 +73,13 @@
             font-size: 1rem;
             text-transform: uppercase;
             @include tablet {
-                color: $txt-main-color;
+                color: #ea4913;
+                padding: 20px;
+                font-weight: 500;
+            }
+            @include mobile {
+                font-weight: 500;
+                color: #ea4913;
                 padding: 20px;
             }
         }
@@ -47,12 +89,9 @@
             right: -50px;
             border-right: 1px solid $txt-white;
         }
-        @include tablet {
-            flex-direction: column;
-            // background: $txt-white;
-            width: 100%;
-            z-index: 100;
-        }
-        @include mobile {}
+    }
+    &__menu.active {
+        transform: translateX(0%);
+        transition: transform 0.5s ease;
     }
 }

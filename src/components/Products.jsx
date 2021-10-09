@@ -12,8 +12,8 @@ const Products = props => {
                 <div className="products__list">
                 <Grid 
                     col={5}
-                    mdCol={2}
-                    smCol={1}
+                    mdCol={3}
+                    smCol={2}
                     gap={15}
                 >
                     {dataProduct.map((item, index)=>(

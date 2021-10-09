@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/images/logo.png';
+import { HiMenuAlt1 } from "react-icons/hi";
 
 const mainNav=[
     {
@@ -26,21 +27,24 @@ const mainNav=[
 ];
 
 const Header = () => {
-    
+    const menuRef = useRef(null);
+    const menuToggle = ()=> menuRef.current.classList.toggle('active');
+
     return (
         <div className="header">
             <div className="container">
+                <HiMenuAlt1 className="icon-menu" onClick={menuToggle}/>
                 <div className="header__logo">
                     <Link to='/'>
                         <img src={Logo} alt="logo" />
                     </Link>
                 </div>
-                <div className="header__menu">
+                <div className="header__menu" ref={menuRef}>
                     {
                         mainNav.map((item, index) => (
 
                             <div className="header__menu__item" key={index}>
-                                   <Link to={item.path}>
+                                   <Link to={item.path} onClick={menuToggle}>
                                         <span>{item.display}</span>
                                    </Link>
                             </div>

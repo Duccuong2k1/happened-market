@@ -8,6 +8,12 @@
     .container {
         width: 100%;
     }
+    @include tablet {
+        width: auto;
+    }
+    @include mobile {
+        width: auto;
+    }
     &__header {
         margin: 0 auto;
         text-align: center;
@@ -37,6 +43,10 @@
             overflow: hidden;
             padding-bottom: 20px;
             @include tablet {
+                width: auto;
+                height: auto;
+            }
+            @include mobile {
                 width: auto;
                 height: auto;
             }
