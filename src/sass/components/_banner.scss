@@ -1,0 +1,61 @@
+.banner {
+    background-color: $main-bg;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    text-align: center;
+    padding: 88px 0;
+    width: 100%;
+    .container {
+        width: 100%;
+    }
+    h3 {
+        font-size: 40px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 0;
+        font-style: italic;
+    }
+    &__text {
+        font-size: 171.31px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 12.5rem;
+        color: $txt-white;
+        position: relative;
+    }
+    &__btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        span {
+            margin-right: 40px;
+        }
+        &__item {
+            border: 3px solid $txt-main-color;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 5px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        &__text {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 5px 20px;
+            text-transform: capitalize;
+            border-top: 3px solid $txt-main-color;
+            border-bottom: 3px solid $txt-main-color;
+        }
+        &__icon__next {
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+}
