@@ -4,7 +4,6 @@
     background-size: contain;
     height: 100vh;
     text-align: center;
-    padding: 88px 0;
     width: 100%;
     .container {
         width: 100%;
@@ -13,13 +12,13 @@
         font-size: 40px;
         font-weight: 800;
         text-transform: uppercase;
-        padding: 0;
+        padding-top: 80px;
         font-style: italic;
         @include tablet {
             padding-top: 300px;
         }
         @include mobile {
-            padding-top: 180px;
+            padding-top: 280px;
         }
     }
     &__text {

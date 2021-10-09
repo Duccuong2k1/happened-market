@@ -1,8 +1,8 @@
 {
-    "name": "happen-maket",
+    "name": "happen-market",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://Duccuong2k1.github.io/happened-market",
+    "homepage": "http://Duccuong2k1.github.io/",
     "dependencies": {
         "@testing-library/jest-dom": "^5.14.1",
         "@testing-library/react": "^11.2.7",
