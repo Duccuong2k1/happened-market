@@ -13,6 +13,18 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
+    @include tablet {
+        h3,
+        p {
+            font-size: 14px;
+        }
+    }
+    @include mobile {
+        h3,
+        p {
+            font-size: 12px;
+        }
+    }
 }
 
 ul {

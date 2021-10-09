@@ -9,10 +9,22 @@
         margin: 0 auto;
         padding: 115px 0;
         position: relative;
+        @include tablet {
+            .icon1,
+            .icon2 {
+                display: none;
+            }
+        }
         h4 {
             font-size: 45px;
             font-weight: 600;
             text-transform: uppercase;
+            @include tablet {
+                font-size: 30px;
+            }
+            @include mobile {
+                font-size: 30px;
+            }
         }
         p {
             padding: 45px 0;
@@ -41,6 +53,11 @@
         border-top: 2px solid $txt-main-color;
         border-bottom: 2px solid $txt-main-color;
         overflow: hidden;
+        @include tablet {
+            border-top: none;
+            border-bottom: none;
+        }
+        ;
         &__box {
             width: 385px;
             height: 475px;
@@ -50,6 +67,14 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            @include tablet {
+                width: auto;
+                height: 100%;
+            }
+            @include mobile {
+                width: auto;
+                height: 100%;
+            }
             h4 {
                 font-size: 55px;
                 font-weight: 600;
@@ -73,6 +98,14 @@
             width: 385px;
             height: 475px;
             text-align: center;
+            @include tablet {
+                width: auto;
+                height: 100%;
+            }
+            @include mobile {
+                width: auto;
+                height: 100%;
+            }
             &__header {
                 background-color: $main-header-bg;
                 padding: 18px;
@@ -143,5 +176,8 @@
         position: absolute;
         top: 450px;
         left: 400px;
+        @include tablet {
+            display: none;
+        }
     }
 }

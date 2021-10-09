@@ -9,3 +9,7 @@
     background: transparent;
     cursor: pointer;
 }
+
+.btn:hover {
+    box-shadow: $box-shadow;
+}
