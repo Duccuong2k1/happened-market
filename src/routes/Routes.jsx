@@ -5,7 +5,7 @@ import Home from '../pages/Home';
 const Routes = () => {
     return (
         <Switch>
-            <Route exact path="/" component={Home}  />
+            <Route exact path="/happened-market" component={Home}  />
         </Switch>
     )
 }
