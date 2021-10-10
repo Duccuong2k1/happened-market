@@ -35,7 +35,7 @@ const Header = () => {
             <div className="container">
                 <HiMenuAlt1 className="icon-menu" onClick={menuToggle}/>
                 <div className="header__logo">
-                    <Link to='/'>
+                    <Link to='/happened-market'>
                         <img src={Logo} alt="logo" />
                     </Link>
                 </div>
